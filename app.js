@@ -1,4 +1,3 @@
-"use strict";
 var Color;
 (function (Color) {
     Color[Color["A"] = 0] = "A";
@@ -10,13 +9,12 @@ var Color;
     Color[Color["U"] = 6] = "U";
     Color[Color["O"] = 7] = "O";
 })(Color || (Color = {}));
-window.onload = () => {
+window.onload = function () {
     var myArray;
-    myArray = [9, 3, 4, 5, 6, 7, 4, 3, 2,];
-    myArray.forEach(element => {
+    myArray = [9, 3, 4, 5, 6, 7, 4, 3, 2, 1];
+    myArray.forEach(function (element) {
         console.log(element);
     });
-    var alfa;
-    alfa = Color.G;
+    var alfa = Color.A;
     console.log(alfa);
 };

@@ -5,38 +5,41 @@ class Fruits {
 }
 
 window.onload = () => {
-    var i: number;
-    var textOut: string = "";
+    var i: number = 1;
+    var a: number = 10;
+    var textWhile: string = ""; 
+    var textDoWhile: string = "";
+    var textFor: string = "";
+    var textForArray: string = "";
+    var textForIn: string = "";
     var myArray: Array<any> = ["cat", "dog", 223, "fish", true, "bat"];
+    var maca: Fruits = {name: "Apple", color: "Red", size: 5};
 
-    // while (i < 10){
-    //     textOut += "o numero é: " + i + "<br>";
-    //     i++;
-    // }
-
-    // document.getElementById('content').innerHTML = textOut;
-
-    // do{
-    //     textOut += "o numero é: " + i + "<br>";
-    //     i++;
-    // } while (i < 10)
-        
-    // document.getElementById('content').innerHTML = textOut;
-    
-    // for (i = 0; i < 5; i++) {
-    //     textOut += "o numero é: " + i + "<br>";
-    // }
-
-    for (i = 0; i < 5; i++) {
-        textOut += myArray[i]+"<br>";
+    while (i < 10){
+        textWhile += " o numero While é: " + i;
+        i++;
+        console.log(textWhile);
     }
 
-    var maca: Fruits = {name: "Apple", color: "Red", size: 5};
-    var text: string = "";
+    do{
+        textDoWhile += " o numero DoWhile é: " + a ;
+        a++;
+        console.log(textDoWhile);
+    } while (a < 10)
+            
+    for (let b: number = 0; b< 5; b++) {
+        textFor += " o numero For é: " + b;
+        console.log(textFor);
+    }
+
+    for (let c: number = 0; c < 5; c++) {
+        textForArray += myArray[c];
+    }
+    
+    console.log(textForArray);
 
     for (const f in maca) {
-        text += maca[f];
+        textForIn += maca[f];
     }
-
-    document.getElementById('content').innerHTML = text;
+    console.log(textForIn);
 }

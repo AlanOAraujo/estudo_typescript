@@ -11,9 +11,7 @@ window.onload = () => {
         console.log(element);
     });
 
-    var alfa: Color;
-
-    alfa = Color.G;
+    var alfa: Color = Color.A;
 
     console.log(alfa);
 
