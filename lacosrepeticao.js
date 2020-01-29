@@ -35,4 +35,25 @@ window.onload = function () {
         textForIn += maca[f];
     }
     console.log(textForIn);
+    var textBreak = "";
+    for (var index = 0; index < 10; index++) {
+        if (index == 3) {
+            break;
+        }
+        else {
+            textBreak += " O numero do Break é: " + index;
+            console.log(textBreak);
+        }
+    }
+    var textContinue = "";
+    for (var k = 0; k < 10; k++) {
+        if (k == 3) {
+            console.log("Caiu no Continue");
+            continue;
+        }
+        else {
+            textContinue += " O numero do Continue é: " + k;
+            console.log(textContinue);
+        }
+    }
 };

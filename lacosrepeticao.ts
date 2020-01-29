@@ -42,4 +42,25 @@ window.onload = () => {
         textForIn += maca[f];
     }
     console.log(textForIn);
+
+    var textBreak: string = ""
+    for (let index = 0; index < 10; index++) {
+        if(index == 3){
+            break;
+        }else {
+            textBreak += " O numero do Break é: " + index;
+            console.log(textBreak) 
+        }
+    }
+
+    var textContinue: string = ""
+    for (let k = 0; k < 10; k++) {
+        if(k == 3){
+            continue;
+        }else {
+            textContinue += " O numero do Continue é: " + k;
+            console.log(textContinue) 
+        }
+        
+    }
 }
