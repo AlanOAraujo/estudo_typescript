@@ -17,6 +17,7 @@ window.onload = function () {
         return result;
     }
     console.log("Resultado das multiplicações " + multiplyNumber(2, 5, 2));
+    //Function com parametro rest, que serve como um grupo sem limites, e não precisa colocar parametros adicionais
     function buildName(firstName) {
         var restOfName = [];
         for (var _i = 1; _i < arguments.length; _i++) {
@@ -24,7 +25,7 @@ window.onload = function () {
         }
         return firstName + " " + restOfName.join(" ");
     }
-    console.log("Resultado das multiplicações " + buildName("Alan", "Oliveira", "de", "Almeida", "Araujo"));
+    console.log("Resultado das multiplicações " + buildName("Alan", "Oliveira", "de", "Almeida", "Araujo", 9, "de", "Janeiro", 1990));
     function calculaArea(x, y) {
         var result;
         if (y > 0) {
