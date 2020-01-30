@@ -27,6 +27,7 @@ window.onload = () => {
     console.log("Resultado das multiplicações " + buildName("Alan", "Oliveira", "de", "Almeida", "Araujo"));
 
 
+    //Sobrecarga na Function
     function calculaArea(x:number): number ;
     function calculaArea(x:number, y:number): number ;
     function calculaArea(x:number, y?:number): any {
