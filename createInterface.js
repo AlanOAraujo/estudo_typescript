@@ -1,3 +1,11 @@
+var Clock = /** @class */ (function () {
+    function Clock(h, m) {
+    }
+    Clock.prototype.setTime = function (d) {
+        this.currentTime = d;
+    };
+    return Clock;
+}());
 window.onload = function () {
     function printLabel(labelObj) {
         console.log(labelObj.label);
@@ -21,4 +29,9 @@ window.onload = function () {
     console.log(mySearch("Alan Araujo", "Araujo"));
     var myArray = ["Bob", "Apollo"];
     console.log(myArray[1]);
+    var square = {};
+    square.color = "blue";
+    square.penWidth = 5.0;
+    square.sideLenght = 10;
+    console.log(square.color + " " + square.penWidth + " " + square.sideLenght);
 };
