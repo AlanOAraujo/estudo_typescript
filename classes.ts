@@ -33,6 +33,39 @@ class Areas{
 
 }
 
+class Produto {
+
+    name: string
+    preco: number
+
+    constructor(name: string, preco: number) {
+        this.name = name
+        this.preco = preco
+    }
+
+    precoComDesconto(desconto:number=0){
+        let precoFinal: number = this.preco - (this.preco * desconto)
+        console.log(this.name + " : $"+precoFinal)
+    }
+
+} 
+
+class Tv extends Produto {
+
+    size:number
+
+    constructor(name:string, preco:number, size:number) {
+        super(name, preco);
+        this.size = size;
+    }
+
+    precoComDesconto(desconto:number){
+        console.log("Tamanho da TV: "+this.size+" pol")
+        super.precoComDesconto(desconto);
+    }
+
+}
+
 window.onload = () => {
 
     var myHello = new Hello("World");
@@ -46,5 +79,9 @@ window.onload = () => {
     console.log("Tamanho do Retangulo: " + myAreas.rectangle(8,9))
 
     console.log("Tamanho do Quadrado: " + myAreas.square(4))
+
+    let myProduct = new Produto("Melancia", 10.00).precoComDesconto(0.02);
+
+    let myTV = new Tv("Samsung",1499,43).precoComDesconto(0.12);
 
 }
