@@ -21,6 +21,34 @@ var Product = /** @class */ (function () {
         var precoFinal = this.preco - (this.preco * desconto);
         console.log(this.name + " : $" + precoFinal);
     };
+    Object.defineProperty(Product.prototype, "getName", {
+        get: function () {
+            return this.name;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Product.prototype, "setName", {
+        set: function (name) {
+            this.name = name;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Product.prototype, "getPreco", {
+        get: function () {
+            return this.preco;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Product.prototype, "setPreco", {
+        set: function (preco) {
+            this.preco = preco;
+        },
+        enumerable: true,
+        configurable: true
+    });
     return Product;
 }());
 var Celular = /** @class */ (function (_super) {
@@ -36,8 +64,43 @@ var Celular = /** @class */ (function (_super) {
     };
     return Celular;
 }(Product));
+var Pessoa = /** @class */ (function () {
+    function Pessoa() {
+    }
+    Object.defineProperty(Pessoa.prototype, "getName", {
+        get: function () {
+            return this.name;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Pessoa.prototype, "setName", {
+        set: function (name) {
+            this.name = name;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Pessoa.prototype, "getAltura", {
+        get: function () {
+            return this.altura;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Pessoa.prototype, "setAltura", {
+        set: function (altura) {
+            this.altura = altura;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    return Pessoa;
+}());
 window.onload = function () {
     new Celular("Google Pixel", 2000, "Android 10").precoComDesconto(0.2);
-    var mySeller = Product.seller = "eee";
-    console.log(mySeller);
+    var persona = new Pessoa();
+    persona.setAltura = 1.75;
+    persona.setName = "Alan";
+    console.log("Nome: " + persona.getName + " Altura: " + persona.getAltura);
 };
